@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Skills Directory | 700+ Agent Skills for AI Automation</title>
+    <meta name="description" content="Discover and install 700+ skills for OpenClaw agents. Browse productivity, development, research, communication, automation, and data skills. Extend your AI agent's capabilities.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="OpenClaw Skills Directory | Extend Your AI Agent">
+    <meta property="og:description" content="Browse 700+ skills for OpenClaw agents. Productivity, development, research, automation, and more. Install with npx clawdhub install.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skills.openclaw.ai">
+    <meta property="og:image" content="https://skills.openclaw.ai/og-image.png">
+    <meta property="og:site_name" content="OpenClaw Skills Directory">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenClaw Skills Directory | 700+ Agent Skills">
+    <meta name="twitter:description" content="Discover skills for OpenClaw agents. Extend your AI with productivity, dev tools, automation, and more.">
+    <meta name="twitter:image" content="https://skills.openclaw.ai/og-image.png">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://skills.openclaw.ai">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "OpenClaw Skills Directory",
+        "description": "Comprehensive directory of 700+ skills for OpenClaw AI agents. Browse by category: productivity, development, research, communication, automation, and data.",
+        "url": "https://skills.openclaw.ai",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "OpenClaw Skills",
+            "numberOfItems": 700,
+            "itemListElement": [
+                {"@type": "SoftwareApplication", "name": "GitHub Skill", "applicationCategory": "DeveloperApplication"},
+                {"@type": "SoftwareApplication", "name": "Brave Search", "applicationCategory": "ProductivityApplication"},
+                {"@type": "SoftwareApplication", "name": "Slack Integration", "applicationCategory": "CommunicationApplication"}
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "OpenClaw",
+            "url": "https://openclaw.ai"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+            --accent-pink: #ec4899;
+            --accent-orange: #f97316;
+            --accent-cyan: #06b6d4;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--bg-card);
+            border-color: var(--primary);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.05) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Search */
+        .search-section {
+            padding: 40px 0;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 16px 20px 16px 48px;
+            font-size: 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .search-box input:focus {
+            border-color: var(--primary);
+        }
+        
+        .search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+        
+        /* Categories */
+        .categories-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        
+        .category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .category-card:hover, .category-card.active {
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .category-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .category-count {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* Skills Grid */
+        .skills-section {
+            padding: 60px 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.2s;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .skill-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .skill-category {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary);
+        }
+        
+        .skill-description {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .skill-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .skill-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skill-install {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        
+        .skill-links {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .skill-links a {
+            font-size: 13px;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skill-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Newsletter */
+        .newsletter-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            border-radius: 24px;
+            margin: 60px 20px;
+            text-align: center;
+        }
+        
+        .newsletter-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        
+        .newsletter-section p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 14px 20px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .newsletter-form input:focus {
+            border-color: var(--primary);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .cta-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .cta-card p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🦞</div>
+                    <div class="logo-text">Open<span>Claw</span> Skills</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="#categories">Categories</a>
+                    <a href="#skills">Browse Skills</a>
+                    <a href="https://docs.openclaw.ai" target="_blank">Docs</a>
+                    <a href="#submit" class="btn btn-primary">Submit Skill</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Skills for<br>OpenClaw Agents</h1>
+            <p>Browse 700+ community-built skills to extend your AI agent's capabilities. From web automation to DevOps, research to productivity.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">700+</div>
+                    <div class="stat-label">Skills Available</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">28</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Contributors</div>
+                </div>
+            </div>
+            
+            <div class="hero-ctas">
+                <a href="#skills" class="btn btn-primary">Browse Skills →</a>
+                <a href="https://docs.openclaw.ai/tools/skills" class="btn btn-secondary" target="_blank">📖 Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search skills by name, description, or category..." onkeyup="filterSkills()">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('all')">
+                    <div class="category-icon">🌐</div>
+                    <div class="category-name">All Skills</div>
+                    <div class="category-count">700+ skills</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('productivity')">
+                    <div class="category-icon">⚡</div>
+                    <div class="category-name">Productivity</div>
+                    <div class="category-count">42 skills</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('development')">
+                    <div class="category-icon">💻</div>
+                    <div class="category-name">Development</div>
+                    <div class="category-count">65 skills</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('research')">
+                    <div class="category-icon">🔬</div>
+                    <div class="category-name">Research</div>
+                    <div class="category-count">23 skills</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('communication')">
+                    <div class="category-icon">💬</div>
+                    <div class="category-name">Communication</div>
+                    <div class="category-count">26 skills</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('automation')">
+                    <div class="category-icon">🤖</div>
+                    <div class="category-name">Automation</div>
+                    <div class="category-count">52 skills</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('data')">
+                    <div class="category-icon">📊</div>
+                    <div class="category-name">Data</div>
+                    <div class="category-count">29 skills</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Grid -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Featured Skills</h2>
+            <div class="skills-grid" id="skillsGrid">
+                
+                <!-- Development Skills -->
+                <div class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <div class="skill-name">GitHub</div>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Interact with GitHub using the gh CLI. Create repos, manage PRs, issues, and automate Git workflows directly from your agent.</p>
+                    <div class="skill-meta">
+                        <span>👤 steipete</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install github</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install github')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/github" target="_blank">📂 Source</a>
+                        <a href="https://clawdhub.com/skills/github" target="_blank">📖 Docs</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <div class="skill-name">Coding Agent</div>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent. Delegate complex coding tasks to specialized AI agents.</p>
+                    <div class="skill-meta">
+                        <span>👤 steipete</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install coding-agent</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install coding-agent')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/coding-agent" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <div class="skill-name">Vercel Deploy</div>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Deploy applications and websites to Vercel. Manage projects, domains, and environment variables via CLI.</p>
+                    <div class="skill-meta">
+                        <span>👤 thesethrose</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install vercel</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install vercel')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/thesethrose/vercel" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <div class="skill-name">Conventional Commits</div>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Format commit messages using the Conventional Commits specification. Enforce consistent commit message style.</p>
+                    <div class="skill-meta">
+                        <span>👤 bastos</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install conventional-commits</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install conventional-commits')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/bastos/conventional-commits" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <div class="skill-name">Frontend Design</div>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Create distinctive, production-grade frontend interfaces with high design quality. UI/UX best practices built-in.</p>
+                    <div class="skill-meta">
+                        <span>👤 steipete</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install frontend-design</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install frontend-design')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/frontend-design" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <!-- Research Skills -->
+                <div class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <div class="skill-name">Brave Search</div>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">Web search and content extraction via Brave Search API. Privacy-focused search with no tracking.</p>
+                    <div class="skill-meta">
+                        <span>👤 steipete</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install brave-search</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install brave-search')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/brave-search" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <div class="skill-name">Exa Search</div>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">Neural web search via Exa AI. Search people, companies, news, research papers, and code with semantic understanding.</p>
+                    <div class="skill-meta">
+                        <span>👤 jordyvandomselaar</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install exa-plus</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install exa-plus')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/jordyvandomselaar/exa-plus" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <div class="skill-name">Tavily Search</div>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">AI-optimized web search via Tavily API. Returns concise, relevant results specifically designed for AI agents.</p>
+                    <div class="skill-meta">
+                        <span>👤 arun-8687</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install tavily</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install tavily')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/arun-8687/tavily-search" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <div class="skill-name">ArXiv Watcher</div>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">Search and summarize papers from ArXiv. Stay updated on the latest academic research in AI, ML, and more.</p>
+                    <div class="skill-meta">
+                        <span>👤 rubenfb23</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install arxiv-watcher</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install arxiv-watcher')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/rubenfb23/arxiv-watcher" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <div class="skill-name">Perplexity</div>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">Perplexity API for web-grounded search with citations. Get answers backed by sources.</p>
+                    <div class="skill-meta">
+                        <span>👤 dronnick</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install perplexity</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install perplexity')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/dronnick/perplexity-bash" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <!-- Communication Skills -->
+                <div class="skill-card" data-category="communication">
+                    <div class="skill-header">
+                        <div class="skill-name">Slack</div>
+                        <span class="skill-category">Communication</span>
+                    </div>
+                    <p class="skill-description">Control Slack from your agent. Send messages, manage channels, react to messages, and automate team communication.</p>
+                    <div class="skill-meta">
+                        <span>👤 steipete</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install slack</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install slack')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/slack" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="communication">
+                    <div class="skill-header">
+                        <div class="skill-name">Discord</div>
+                        <span class="skill-category">Communication</span>
+                    </div>
+                    <p class="skill-description">Control Discord from your agent. Send messages, react to posts, and manage Discord server interactions.</p>
+                    <div class="skill-meta">
+                        <span>👤 steipete</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install discord</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install discord')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/discord" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="communication">
+                    <div class="skill-header">
+                        <div class="skill-name">Tweet Writer</div>
+                        <span class="skill-category">Communication</span>
+                    </div>
+                    <p class="skill-description">Write viral, persuasive, engaging tweets and threads. Craft social media content that resonates.</p>
+                    <div class="skill-meta">
+                        <span>👤 sanky369</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install tweet-writer</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install tweet-writer')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/sanky369/tweet-writer" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <!-- Automation Skills -->
+                <div class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <div class="skill-name">Agent Browser</div>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Headless browser automation CLI with accessibility tree snapshots. Automate web interactions from the terminal.</p>
+                    <div class="skill-meta">
+                        <span>👤 thesethrose</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install agent-browser</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install agent-browser')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/thesethrose/agent-browser" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <div class="skill-name">Playwright CLI</div>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Browser automation via Playwright CLI for testing and scraping. Full browser control with simple commands.</p>
+                    <div class="skill-meta">
+                        <span>👤 gumadeiras</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install playwright-cli</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install playwright-cli')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/gumadeiras/playwright-cli" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <div class="skill-name">Cloudflare Workers</div>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Manage Cloudflare Workers, KV, D1, R2, and secrets using the Wrangler CLI. Deploy edge functions instantly.</p>
+                    <div class="skill-meta">
+                        <span>👤 asleep123</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install cloudflare</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install cloudflare')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/asleep123/wrangler" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <div class="skill-name">Tailscale</div>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Manage Tailscale tailnet via CLI and API. Control VPN connections, devices, and network settings.</p>
+                    <div class="skill-meta">
+                        <span>👤 jmagar</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install tailscale</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install tailscale')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/jmagar/tailscale" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <div class="skill-name">Kubernetes</div>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Comprehensive Kubernetes and OpenShift cluster management. Execute kubectl commands and manage clusters.</p>
+                    <div class="skill-meta">
+                        <span>👤 kcns008</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install kubernetes</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install kubernetes')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/kcns008/kubernetes" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <!-- Productivity Skills -->
+                <div class="skill-card" data-category="productivity">
+                    <div class="skill-header">
+                        <div class="skill-name">Apple Reminders</div>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Natural language reminders via Apple Reminders.app. Create and manage reminders with voice-like commands.</p>
+                    <div class="skill-meta">
+                        <span>👤 plgonzalezrx8</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install apple-remind-me</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install apple-remind-me')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/plgonzalezrx8/apple-remind-me" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="productivity">
+                    <div class="skill-header">
+                        <div class="skill-name">Linear</div>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Linear.app CLI for issue tracking. List, create, and update issues directly from your agent.</p>
+                    <div class="skill-meta">
+                        <span>👤 whoisnnamdi</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install linearis</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install linearis')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/whoisnnamdi/linearis" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="productivity">
+                    <div class="skill-header">
+                        <div class="skill-name">Deepwork Tracker</div>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Track deep work sessions locally. Start, stop, and check status of focused work periods.</p>
+                    <div class="skill-meta">
+                        <span>👤 adunne09</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install deepwork-tracker</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install deepwork-tracker')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/adunne09/deepwork-tracker" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="productivity">
+                    <div class="skill-header">
+                        <div class="skill-name">Gamma Presentations</div>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Generate AI-powered presentations, documents, and social posts using Gamma.app API.</p>
+                    <div class="skill-meta">
+                        <span>👤 stopmoclay</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install gamma</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install gamma')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/stopmoclay/gamma" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <!-- Data Skills -->
+                <div class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <div class="skill-name">Supabase</div>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Connect to Supabase for database operations, vector search, and storage. Full Postgres access.</p>
+                    <div class="skill-meta">
+                        <span>👤 stopmoclay</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install supabase</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install supabase')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/stopmoclay/supabase" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <div class="skill-name">Bright Data</div>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Web scraping and search via Bright Data API. Extract structured data from any website.</p>
+                    <div class="skill-meta">
+                        <span>👤 meirkad</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install brightdata</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install brightdata')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/meirkad/bright-data" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <div class="skill-name">YouTube Summarizer</div>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Fetch YouTube transcripts and generate structured summaries. Extract insights from video content.</p>
+                    <div class="skill-meta">
+                        <span>👤 abe238</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install youtube-summarizer</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install youtube-summarizer')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/abe238/youtube-summarizer" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <div class="skill-name">Unraid</div>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Query and monitor Unraid servers via the GraphQL API. Check disk health, containers, and VMs.</p>
+                    <div class="skill-meta">
+                        <span>👤 jmagar</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install unraid</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install unraid')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/jmagar/unraid" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <div class="skill-name">Fal.ai</div>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Generate images, videos and audio using Fal.ai's generative media API. Access multiple AI models.</p>
+                    <div class="skill-meta">
+                        <span>👤 agmmnn</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install fal-ai</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install fal-ai')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/agmmnn/fal-ai" target="_blank">📂 Source</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>🦞 Stay Updated</h2>
+            <p>Get weekly updates on new skills, tutorials, and OpenClaw news.</p>
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTAs -->
+    <section class="cta-section" id="submit">
+        <div class="container">
+            <div class="cta-grid">
+                <div class="cta-card">
+                    <h3>🚀 Submit Your Skill</h3>
+                    <p>Built a useful skill? Share it with the community and help other developers.</p>
+                    <a href="https://github.com/openclaw/clawhub" class="btn btn-primary" target="_blank">Submit Skill →</a>
+                </div>
+                <div class="cta-card">
+                    <h3>💎 Become a Sponsor</h3>
+                    <p>Support the OpenClaw ecosystem and get featured placement in the directory.</p>
+                    <a href="mailto:sponsors@openclaw.ai" class="btn btn-secondary">Contact Us →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://openclaw.ai" target="_blank">OpenClaw</a>
+                <a href="https://docs.openclaw.ai" target="_blank">Documentation</a>
+                <a href="https://github.com/openclaw" target="_blank">GitHub</a>
+                <a href="https://clawdhub.com" target="_blank">ClawdHub</a>
+                <a href="https://discord.gg/openclaw" target="_blank">Discord</a>
+            </div>
+            <p class="footer-copy">© 2026 OpenClaw Skills Directory. Made with 🦞 for the AI agent community.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Copy to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Visual feedback could be added here
+                alert('Copied: ' + text);
+            });
+        }
+
+        // Filter skills by search
+        function filterSkills() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const skillCards = document.querySelectorAll('.skill-card');
+            
+            skillCards.forEach(card => {
+                const name = card.querySelector('.skill-name').textContent.toLowerCase();
+                const description = card.querySelector('.skill-description').textContent.toLowerCase();
+                const category = card.dataset.category.toLowerCase();
+                
+                if (name.includes(searchTerm) || description.includes(searchTerm) || category.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            const skillCards = document.querySelectorAll('.skill-card');
+            const categoryCards = document.querySelectorAll('.category-card');
+            
+            // Update active state
+            categoryCards.forEach(card => card.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            
+            skillCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Scroll to skills section
+            document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
