@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenClaw Skills Directory | 700+ Agent Skills for AI Automation</title>
-    <meta name="description" content="Discover and install 700+ skills for OpenClaw agents. Browse productivity, development, research, communication, automation, and data skills. Extend your AI agent's capabilities.">
+    <meta name="description" content="Discover and install 700+ skills for OpenClaw agents. Browse productivity, development, research, communication, automation, and data skills. Extend your AI agent's capabilities with the official skills directory.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="OpenClaw Skills Directory | Extend Your AI Agent">
@@ -23,7 +23,23 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://skills.openclaw.ai">
     
-    <!-- JSON-LD Schema -->
+    <!-- JSON-LD Schema - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "OpenClaw Skills Directory",
+        "description": "The official directory of 700+ skills for OpenClaw AI agents. Discover, install, and extend your AI assistant's capabilities.",
+        "url": "https://skills.openclaw.ai",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://skills.openclaw.ai?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- JSON-LD Schema - CollectionPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -36,9 +52,11 @@
             "name": "OpenClaw Skills",
             "numberOfItems": 700,
             "itemListElement": [
-                {"@type": "SoftwareApplication", "name": "GitHub Skill", "applicationCategory": "DeveloperApplication"},
-                {"@type": "SoftwareApplication", "name": "Brave Search", "applicationCategory": "ProductivityApplication"},
-                {"@type": "SoftwareApplication", "name": "Slack Integration", "applicationCategory": "CommunicationApplication"}
+                {"@type": "SoftwareApplication", "name": "GitHub Skill", "applicationCategory": "DeveloperApplication", "operatingSystem": "macOS, Linux, Windows"},
+                {"@type": "SoftwareApplication", "name": "Brave Search", "applicationCategory": "ProductivityApplication", "operatingSystem": "macOS, Linux, Windows"},
+                {"@type": "SoftwareApplication", "name": "Slack Integration", "applicationCategory": "CommunicationApplication", "operatingSystem": "macOS, Linux, Windows"},
+                {"@type": "SoftwareApplication", "name": "Supabase", "applicationCategory": "DeveloperApplication", "operatingSystem": "macOS, Linux, Windows"},
+                {"@type": "SoftwareApplication", "name": "Kubernetes", "applicationCategory": "DeveloperApplication", "operatingSystem": "macOS, Linux, Windows"}
             ]
         },
         "publisher": {
@@ -46,6 +64,88 @@
             "name": "OpenClaw",
             "url": "https://openclaw.ai"
         }
+    }
+    </script>
+    
+    <!-- JSON-LD Schema - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is OpenClaw?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "OpenClaw is an open-source, locally-running AI assistant that operates directly on your machine. It supports multiple AI models, browser automation, device control, and extensibility through skills. Previously known as Moltbot and originally Clawdbot, OpenClaw provides a personal AI agent that respects your privacy by running locally."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are OpenClaw Skills?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "OpenClaw Skills are modular extensions that teach your AI agent how to use specific tools and services. Each skill is a directory containing a SKILL.md file with instructions. Skills can integrate with APIs, automate workflows, control browsers, manage cloud infrastructure, and much more. They follow the AgentSkills convention developed by Anthropic."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I install OpenClaw skills?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Install skills using the ClawdHub CLI: npx clawdhub@latest install <skill-name>. Alternatively, copy the skill folder to ~/.openclaw/skills/ (global) or <project>/skills/ (workspace). Workspace skills take precedence over global skills."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are OpenClaw skills free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all skills in the OpenClaw Skills Directory are free and open-source. However, some skills may require API keys for external services (like OpenAI, Brave Search, etc.) which may have their own pricing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is OpenClaw different from ChatGPT or Claude?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlike ChatGPT or Claude's web interfaces, OpenClaw runs locally on your machine with full system access. It can control your browser, execute shell commands, manage files, and integrate with local services. OpenClaw also supports multiple AI models (Claude, GPT-4, Gemini, local models) and is fully extensible through skills."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- JSON-LD Schema - HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Install OpenClaw Skills",
+        "description": "Step-by-step guide to installing skills for your OpenClaw AI agent",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Find a Skill",
+                "text": "Browse the OpenClaw Skills Directory or search for specific functionality"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Copy Install Command",
+                "text": "Click the copy button next to the install command: npx clawdhub install <skill-name>"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Run in Terminal",
+                "text": "Open your terminal and paste the command. The skill will be installed to your workspace."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Configure if Needed",
+                "text": "Some skills require API keys. Add them to ~/.openclaw/openclaw.json under skills.entries.<skill-name>.apiKey"
+            }
+        ]
     }
     </script>
     
@@ -232,6 +332,147 @@
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
+        }
+        
+        /* What is OpenClaw Section */
+        .intro-section {
+            padding: 80px 0;
+            background: var(--bg-card);
+        }
+        
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .intro-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .intro-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+        
+        .intro-features {
+            list-style: none;
+            margin-top: 24px;
+        }
+        
+        .intro-features li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .intro-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .intro-features .icon {
+            font-size: 1.5rem;
+        }
+        
+        .comparison-table {
+            background: var(--bg-dark);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .comparison-table th {
+            background: var(--bg-card-hover);
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .check {
+            color: var(--secondary);
+        }
+        
+        .cross {
+            color: #ef4444;
+        }
+        
+        /* Quick Start */
+        .quickstart-section {
+            padding: 80px 0;
+        }
+        
+        .quickstart-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 48px;
+        }
+        
+        .quickstart-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step-card h3 {
+            margin-bottom: 12px;
+        }
+        
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .step-card code {
+            display: block;
+            background: var(--bg-dark);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 16px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--secondary);
         }
         
         /* Search */
@@ -435,6 +676,59 @@
             text-decoration: underline;
         }
         
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: var(--bg-card);
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 48px;
+        }
+        
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 24px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            background: var(--bg-card-hover);
+        }
+        
+        .faq-answer {
+            padding: 0 24px 24px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .faq-answer code {
+            background: var(--bg-card);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+        }
+        
         /* Newsletter */
         .newsletter-section {
             padding: 80px 0;
@@ -489,7 +783,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
@@ -558,6 +852,14 @@
             .nav-links {
                 display: none;
             }
+            
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quickstart-steps {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -573,7 +875,9 @@
                 <nav class="nav-links">
                     <a href="#categories">Categories</a>
                     <a href="#skills">Browse Skills</a>
+                    <a href="#faq">FAQ</a>
                     <a href="https://docs.openclaw.ai" target="_blank">Docs</a>
+                    <a href="sponsor.html">Sponsors</a>
                     <a href="#submit" class="btn btn-primary">Submit Skill</a>
                 </nav>
             </div>
@@ -608,6 +912,113 @@
         </div>
     </section>
 
+    <!-- What is OpenClaw Section -->
+    <section class="intro-section" id="about">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-content">
+                    <h2>What is OpenClaw?</h2>
+                    <p><strong>OpenClaw</strong> is an open-source, locally-running AI assistant that operates directly on your machine. Unlike cloud-based AI services, OpenClaw runs on your hardware, giving you complete control over your data and capabilities.</p>
+                    <p>Previously known as Moltbot and originally Clawdbot, OpenClaw has evolved into a powerful personal AI agent that can:</p>
+                    
+                    <ul class="intro-features">
+                        <li><span class="icon">🌐</span> <span>Control your browser with dedicated Chromium automation</span></li>
+                        <li><span class="icon">💻</span> <span>Execute shell commands and manage files</span></li>
+                        <li><span class="icon">📱</span> <span>Connect to mobile devices for camera, screen, and location access</span></li>
+                        <li><span class="icon">🔌</span> <span>Extend capabilities through 700+ community skills</span></li>
+                        <li><span class="icon">🤖</span> <span>Support multiple AI models: Claude, GPT-4, Gemini, local LLMs</span></li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-table">
+                    <h3 style="padding: 20px; background: var(--bg-card-hover);">OpenClaw vs Other AI Assistants</h3>
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>OpenClaw</th>
+                            <th>ChatGPT</th>
+                            <th>Claude Web</th>
+                        </tr>
+                        <tr>
+                            <td>Runs Locally</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>System Access</td>
+                            <td class="check">✓ Full</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>Browser Control</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>Extensible Skills</td>
+                            <td class="check">✓ 700+</td>
+                            <td>GPTs</td>
+                            <td>MCP</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Model</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>Open Source</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                        <tr>
+                            <td>Device Integration</td>
+                            <td class="check">✓</td>
+                            <td class="cross">✗</td>
+                            <td class="cross">✗</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What are Skills Section -->
+    <section class="quickstart-section" id="quickstart">
+        <div class="container">
+            <h2>What are OpenClaw Skills?</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 48px;">
+                <strong>OpenClaw Skills</strong> are modular extensions that teach your AI agent how to use specific tools and services. Each skill follows the <a href="https://agentskills.io" style="color: var(--primary);">AgentSkills convention</a> developed by Anthropic.
+            </p>
+            
+            <div class="quickstart-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Find a Skill</h3>
+                    <p>Browse the directory or search for specific functionality like "github", "slack", or "kubernetes".</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Install with ClawdHub</h3>
+                    <p>Use the ClawdHub CLI to install skills to your workspace with a single command.</p>
+                    <code>npx clawdhub install github</code>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Use Immediately</h3>
+                    <p>Skills are loaded on your next OpenClaw session. Some require API keys in your config.</p>
+                    <code>~/.openclaw/openclaw.json</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Search -->
     <section class="search-section">
         <div class="container">
@@ -627,36 +1038,36 @@
                     <div class="category-name">All Skills</div>
                     <div class="category-count">700+ skills</div>
                 </div>
-                <div class="category-card" onclick="filterByCategory('productivity')">
+                <a href="productivity.html" class="category-card">
                     <div class="category-icon">⚡</div>
                     <div class="category-name">Productivity</div>
                     <div class="category-count">42 skills</div>
-                </div>
-                <div class="category-card" onclick="filterByCategory('development')">
+                </a>
+                <a href="development.html" class="category-card">
                     <div class="category-icon">💻</div>
                     <div class="category-name">Development</div>
                     <div class="category-count">65 skills</div>
-                </div>
-                <div class="category-card" onclick="filterByCategory('research')">
+                </a>
+                <a href="research.html" class="category-card">
                     <div class="category-icon">🔬</div>
                     <div class="category-name">Research</div>
                     <div class="category-count">23 skills</div>
-                </div>
-                <div class="category-card" onclick="filterByCategory('communication')">
+                </a>
+                <a href="communication.html" class="category-card">
                     <div class="category-icon">💬</div>
                     <div class="category-name">Communication</div>
                     <div class="category-count">26 skills</div>
-                </div>
-                <div class="category-card" onclick="filterByCategory('automation')">
+                </a>
+                <a href="automation.html" class="category-card">
                     <div class="category-icon">🤖</div>
                     <div class="category-name">Automation</div>
                     <div class="category-count">52 skills</div>
-                </div>
-                <div class="category-card" onclick="filterByCategory('data')">
+                </a>
+                <a href="data.html" class="category-card">
                     <div class="category-icon">📊</div>
                     <div class="category-name">Data</div>
                     <div class="category-count">29 skills</div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -668,9 +1079,9 @@
             <div class="skills-grid" id="skillsGrid">
                 
                 <!-- Development Skills -->
-                <div class="skill-card" data-category="development">
+                <article class="skill-card" data-category="development">
                     <div class="skill-header">
-                        <div class="skill-name">GitHub</div>
+                        <h3 class="skill-name">GitHub</h3>
                         <span class="skill-category">Development</span>
                     </div>
                     <p class="skill-description">Interact with GitHub using the gh CLI. Create repos, manage PRs, issues, and automate Git workflows directly from your agent.</p>
@@ -684,13 +1095,12 @@
                     </div>
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/github" target="_blank">📂 Source</a>
-                        <a href="https://clawdhub.com/skills/github" target="_blank">📖 Docs</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="development">
+                <article class="skill-card" data-category="development">
                     <div class="skill-header">
-                        <div class="skill-name">Coding Agent</div>
+                        <h3 class="skill-name">Coding Agent</h3>
                         <span class="skill-category">Development</span>
                     </div>
                     <p class="skill-description">Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent. Delegate complex coding tasks to specialized AI agents.</p>
@@ -705,11 +1115,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/coding-agent" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="development">
+                <article class="skill-card" data-category="development">
                     <div class="skill-header">
-                        <div class="skill-name">Vercel Deploy</div>
+                        <h3 class="skill-name">Vercel Deploy</h3>
                         <span class="skill-category">Development</span>
                     </div>
                     <p class="skill-description">Deploy applications and websites to Vercel. Manage projects, domains, and environment variables via CLI.</p>
@@ -724,11 +1134,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/thesethrose/vercel" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="development">
+                <article class="skill-card" data-category="development">
                     <div class="skill-header">
-                        <div class="skill-name">Conventional Commits</div>
+                        <h3 class="skill-name">Conventional Commits</h3>
                         <span class="skill-category">Development</span>
                     </div>
                     <p class="skill-description">Format commit messages using the Conventional Commits specification. Enforce consistent commit message style.</p>
@@ -742,11 +1152,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/bastos/conventional-commits" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="development">
+                <article class="skill-card" data-category="development">
                     <div class="skill-header">
-                        <div class="skill-name">Frontend Design</div>
+                        <h3 class="skill-name">Frontend Design</h3>
                         <span class="skill-category">Development</span>
                     </div>
                     <p class="skill-description">Create distinctive, production-grade frontend interfaces with high design quality. UI/UX best practices built-in.</p>
@@ -760,12 +1170,67 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/frontend-design" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Kubernetes</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Comprehensive Kubernetes and OpenShift cluster management. Execute kubectl commands and manage clusters.</p>
+                    <div class="skill-meta">
+                        <span>👤 kcns008</span>
+                        <span>⭐ Popular</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install kubernetes</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install kubernetes')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/kcns008/kubernetes" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Cursor Agent</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">A comprehensive skill for using the Cursor CLI agent. Integrate Cursor's AI-powered code editing into your workflow.</p>
+                    <div class="skill-meta">
+                        <span>👤 swiftlysingh</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install cursor-agent</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install cursor-agent')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/swiftlysingh/cursor-agent" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Factory AI</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Use Factory AI's droid CLI for software engineering tasks. Autonomous coding assistant for complex projects.</p>
+                    <div class="skill-meta">
+                        <span>👤 mitchellbernstein</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install factory-ai</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install factory-ai')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/mitchellbernstein/factory-ai" target="_blank">📂 Source</a>
+                    </div>
+                </article>
 
                 <!-- Research Skills -->
-                <div class="skill-card" data-category="research">
+                <article class="skill-card" data-category="research">
                     <div class="skill-header">
-                        <div class="skill-name">Brave Search</div>
+                        <h3 class="skill-name">Brave Search</h3>
                         <span class="skill-category">Research</span>
                     </div>
                     <p class="skill-description">Web search and content extraction via Brave Search API. Privacy-focused search with no tracking.</p>
@@ -780,11 +1245,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/brave-search" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="research">
+                <article class="skill-card" data-category="research">
                     <div class="skill-header">
-                        <div class="skill-name">Exa Search</div>
+                        <h3 class="skill-name">Exa Search</h3>
                         <span class="skill-category">Research</span>
                     </div>
                     <p class="skill-description">Neural web search via Exa AI. Search people, companies, news, research papers, and code with semantic understanding.</p>
@@ -798,11 +1263,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/jordyvandomselaar/exa-plus" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="research">
+                <article class="skill-card" data-category="research">
                     <div class="skill-header">
-                        <div class="skill-name">Tavily Search</div>
+                        <h3 class="skill-name">Tavily Search</h3>
                         <span class="skill-category">Research</span>
                     </div>
                     <p class="skill-description">AI-optimized web search via Tavily API. Returns concise, relevant results specifically designed for AI agents.</p>
@@ -817,11 +1282,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/arun-8687/tavily-search" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="research">
+                <article class="skill-card" data-category="research">
                     <div class="skill-header">
-                        <div class="skill-name">ArXiv Watcher</div>
+                        <h3 class="skill-name">ArXiv Watcher</h3>
                         <span class="skill-category">Research</span>
                     </div>
                     <p class="skill-description">Search and summarize papers from ArXiv. Stay updated on the latest academic research in AI, ML, and more.</p>
@@ -835,11 +1300,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/rubenfb23/arxiv-watcher" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="research">
+                <article class="skill-card" data-category="research">
                     <div class="skill-header">
-                        <div class="skill-name">Perplexity</div>
+                        <h3 class="skill-name">Perplexity</h3>
                         <span class="skill-category">Research</span>
                     </div>
                     <p class="skill-description">Perplexity API for web-grounded search with citations. Get answers backed by sources.</p>
@@ -853,12 +1318,30 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/dronnick/perplexity-bash" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <h3 class="skill-name">DeepWiki</h3>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">Query the DeepWiki MCP server for GitHub repository documentation, wiki structure, and code exploration.</p>
+                    <div class="skill-meta">
+                        <span>👤 arun-8687</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install deepwiki</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install deepwiki')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/arun-8687/deepwiki" target="_blank">📂 Source</a>
+                    </div>
+                </article>
 
                 <!-- Communication Skills -->
-                <div class="skill-card" data-category="communication">
+                <article class="skill-card" data-category="communication">
                     <div class="skill-header">
-                        <div class="skill-name">Slack</div>
+                        <h3 class="skill-name">Slack</h3>
                         <span class="skill-category">Communication</span>
                     </div>
                     <p class="skill-description">Control Slack from your agent. Send messages, manage channels, react to messages, and automate team communication.</p>
@@ -873,11 +1356,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/slack" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="communication">
+                <article class="skill-card" data-category="communication">
                     <div class="skill-header">
-                        <div class="skill-name">Discord</div>
+                        <h3 class="skill-name">Discord</h3>
                         <span class="skill-category">Communication</span>
                     </div>
                     <p class="skill-description">Control Discord from your agent. Send messages, react to posts, and manage Discord server interactions.</p>
@@ -892,11 +1375,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/steipete/discord" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="communication">
+                <article class="skill-card" data-category="communication">
                     <div class="skill-header">
-                        <div class="skill-name">Tweet Writer</div>
+                        <h3 class="skill-name">Tweet Writer</h3>
                         <span class="skill-category">Communication</span>
                     </div>
                     <p class="skill-description">Write viral, persuasive, engaging tweets and threads. Craft social media content that resonates.</p>
@@ -910,12 +1393,30 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/sanky369/tweet-writer" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="skill-card" data-category="communication">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Miniflux News</h3>
+                        <span class="skill-category">Communication</span>
+                    </div>
+                    <p class="skill-description">Fetch and triage the latest unread RSS/news entries from a Miniflux instance. Stay informed effortlessly.</p>
+                    <div class="skill-meta">
+                        <span>👤 hartlco</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install miniflux-news</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install miniflux-news')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/hartlco/miniflux-news" target="_blank">📂 Source</a>
+                    </div>
+                </article>
 
                 <!-- Automation Skills -->
-                <div class="skill-card" data-category="automation">
+                <article class="skill-card" data-category="automation">
                     <div class="skill-header">
-                        <div class="skill-name">Agent Browser</div>
+                        <h3 class="skill-name">Agent Browser</h3>
                         <span class="skill-category">Automation</span>
                     </div>
                     <p class="skill-description">Headless browser automation CLI with accessibility tree snapshots. Automate web interactions from the terminal.</p>
@@ -930,11 +1431,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/thesethrose/agent-browser" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="automation">
+                <article class="skill-card" data-category="automation">
                     <div class="skill-header">
-                        <div class="skill-name">Playwright CLI</div>
+                        <h3 class="skill-name">Playwright CLI</h3>
                         <span class="skill-category">Automation</span>
                     </div>
                     <p class="skill-description">Browser automation via Playwright CLI for testing and scraping. Full browser control with simple commands.</p>
@@ -948,11 +1449,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/gumadeiras/playwright-cli" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="automation">
+                <article class="skill-card" data-category="automation">
                     <div class="skill-header">
-                        <div class="skill-name">Cloudflare Workers</div>
+                        <h3 class="skill-name">Cloudflare Workers</h3>
                         <span class="skill-category">Automation</span>
                     </div>
                     <p class="skill-description">Manage Cloudflare Workers, KV, D1, R2, and secrets using the Wrangler CLI. Deploy edge functions instantly.</p>
@@ -966,11 +1467,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/asleep123/wrangler" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="automation">
+                <article class="skill-card" data-category="automation">
                     <div class="skill-header">
-                        <div class="skill-name">Tailscale</div>
+                        <h3 class="skill-name">Tailscale</h3>
                         <span class="skill-category">Automation</span>
                     </div>
                     <p class="skill-description">Manage Tailscale tailnet via CLI and API. Control VPN connections, devices, and network settings.</p>
@@ -984,30 +1485,84 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/jmagar/tailscale" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="automation">
+                <article class="skill-card" data-category="automation">
                     <div class="skill-header">
-                        <div class="skill-name">Kubernetes</div>
+                        <h3 class="skill-name">Coolify</h3>
                         <span class="skill-category">Automation</span>
                     </div>
-                    <p class="skill-description">Comprehensive Kubernetes and OpenShift cluster management. Execute kubectl commands and manage clusters.</p>
+                    <p class="skill-description">Manage Coolify deployments, applications, databases, and services via the Coolify API. Self-hosted PaaS control.</p>
                     <div class="skill-meta">
-                        <span>👤 kcns008</span>
+                        <span>👤 visiongeist</span>
                     </div>
                     <div class="skill-install">
-                        <code>npx clawdhub install kubernetes</code>
-                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install kubernetes')">📋</button>
+                        <code>npx clawdhub install coolify</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install coolify')">📋</button>
                     </div>
                     <div class="skill-links">
-                        <a href="https://github.com/openclaw/skills/tree/main/skills/kcns008/kubernetes" target="_blank">📂 Source</a>
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/visiongeist/coolify" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Proxmox</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Manage Proxmox VE clusters via REST API. Create, clone, start, stop VMs and containers.</p>
+                    <div class="skill-meta">
+                        <span>👤 weird-aftertaste</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install proxmox</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install proxmox')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/weird-aftertaste/proxmox" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Hetzner Cloud</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Hetzner Cloud CLI for managing servers, volumes, firewalls, networks, DNS, and snapshots.</p>
+                    <div class="skill-meta">
+                        <span>👤 pasogott</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install hetzner-cloud</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install hetzner-cloud')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/pasogott/hetzner-cloud" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Digital Ocean</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Manage Digital Ocean droplets, domains, and infrastructure via DO API. Full cloud control.</p>
+                    <div class="skill-meta">
+                        <span>👤 dbhurley</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install digital-ocean</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install digital-ocean')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/dbhurley/digital-ocean" target="_blank">📂 Source</a>
+                    </div>
+                </article>
 
                 <!-- Productivity Skills -->
-                <div class="skill-card" data-category="productivity">
+                <article class="skill-card" data-category="productivity">
                     <div class="skill-header">
-                        <div class="skill-name">Apple Reminders</div>
+                        <h3 class="skill-name">Apple Reminders</h3>
                         <span class="skill-category">Productivity</span>
                     </div>
                     <p class="skill-description">Natural language reminders via Apple Reminders.app. Create and manage reminders with voice-like commands.</p>
@@ -1021,11 +1576,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/plgonzalezrx8/apple-remind-me" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="productivity">
+                <article class="skill-card" data-category="productivity">
                     <div class="skill-header">
-                        <div class="skill-name">Linear</div>
+                        <h3 class="skill-name">Linear</h3>
                         <span class="skill-category">Productivity</span>
                     </div>
                     <p class="skill-description">Linear.app CLI for issue tracking. List, create, and update issues directly from your agent.</p>
@@ -1039,11 +1594,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/whoisnnamdi/linearis" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="productivity">
+                <article class="skill-card" data-category="productivity">
                     <div class="skill-header">
-                        <div class="skill-name">Deepwork Tracker</div>
+                        <h3 class="skill-name">Deepwork Tracker</h3>
                         <span class="skill-category">Productivity</span>
                     </div>
                     <p class="skill-description">Track deep work sessions locally. Start, stop, and check status of focused work periods.</p>
@@ -1057,11 +1612,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/adunne09/deepwork-tracker" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="productivity">
+                <article class="skill-card" data-category="productivity">
                     <div class="skill-header">
-                        <div class="skill-name">Gamma Presentations</div>
+                        <h3 class="skill-name">Gamma Presentations</h3>
                         <span class="skill-category">Productivity</span>
                     </div>
                     <p class="skill-description">Generate AI-powered presentations, documents, and social posts using Gamma.app API.</p>
@@ -1075,12 +1630,30 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/stopmoclay/gamma" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="skill-card" data-category="productivity">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Prompt Log</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Extract conversation transcripts from AI coding session logs (OpenClaw, Claude Code, Codex).</p>
+                    <div class="skill-meta">
+                        <span>👤 thesash</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install prompt-log</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install prompt-log')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/thesash/prompt-log" target="_blank">📂 Source</a>
+                    </div>
+                </article>
 
                 <!-- Data Skills -->
-                <div class="skill-card" data-category="data">
+                <article class="skill-card" data-category="data">
                     <div class="skill-header">
-                        <div class="skill-name">Supabase</div>
+                        <h3 class="skill-name">Supabase</h3>
                         <span class="skill-category">Data</span>
                     </div>
                     <p class="skill-description">Connect to Supabase for database operations, vector search, and storage. Full Postgres access.</p>
@@ -1095,11 +1668,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/stopmoclay/supabase" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="data">
+                <article class="skill-card" data-category="data">
                     <div class="skill-header">
-                        <div class="skill-name">Bright Data</div>
+                        <h3 class="skill-name">Bright Data</h3>
                         <span class="skill-category">Data</span>
                     </div>
                     <p class="skill-description">Web scraping and search via Bright Data API. Extract structured data from any website.</p>
@@ -1113,11 +1686,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/meirkad/bright-data" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="data">
+                <article class="skill-card" data-category="data">
                     <div class="skill-header">
-                        <div class="skill-name">YouTube Summarizer</div>
+                        <h3 class="skill-name">YouTube Summarizer</h3>
                         <span class="skill-category">Data</span>
                     </div>
                     <p class="skill-description">Fetch YouTube transcripts and generate structured summaries. Extract insights from video content.</p>
@@ -1131,11 +1704,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/abe238/youtube-summarizer" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="data">
+                <article class="skill-card" data-category="data">
                     <div class="skill-header">
-                        <div class="skill-name">Unraid</div>
+                        <h3 class="skill-name">Unraid</h3>
                         <span class="skill-category">Data</span>
                     </div>
                     <p class="skill-description">Query and monitor Unraid servers via the GraphQL API. Check disk health, containers, and VMs.</p>
@@ -1149,11 +1722,11 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/jmagar/unraid" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="skill-card" data-category="data">
+                <article class="skill-card" data-category="data">
                     <div class="skill-header">
-                        <div class="skill-name">Fal.ai</div>
+                        <h3 class="skill-name">Fal.ai</h3>
                         <span class="skill-category">Data</span>
                     </div>
                     <p class="skill-description">Generate images, videos and audio using Fal.ai's generative media API. Access multiple AI models.</p>
@@ -1167,8 +1740,371 @@
                     <div class="skill-links">
                         <a href="https://github.com/openclaw/skills/tree/main/skills/agmmnn/fal-ai" target="_blank">📂 Source</a>
                     </div>
-                </div>
+                </article>
 
+                <article class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Linkding</h3>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Manage linkding bookmarks - save URLs, search, tag, organize your bookmark collection.</p>
+                    <div class="skill-meta">
+                        <span>👤 daveonkels</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install clinkding</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install clinkding')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/daveonkels/clinkding" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <!-- More Development Skills -->
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Azure CLI</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Comprehensive Azure Cloud Platform management via command-line interface. Full Azure resource control.</p>
+                    <div class="skill-meta">
+                        <span>👤 ddevaal</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install azure-cli</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install azure-cli')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/ddevaal/azure-cli" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Fly.io CLI</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Fly.io deploy, logs, SSH, secrets, scaling, and Postgres management. Deploy apps globally.</p>
+                    <div class="skill-meta">
+                        <span>👤 justinburdett</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install flyio-cli</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install flyio-cli')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/justinburdett/flyio-cli" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Dokploy</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Manage Dokploy deployments, projects, applications, and domains via the Dokploy API.</p>
+                    <div class="skill-meta">
+                        <span>👤 joshuarileydev</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install dokploy</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install dokploy')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/joshuarileydev/dokploy" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Browser Use</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Cloud-based browser automation with managed sessions and autonomous task execution.</p>
+                    <div class="skill-meta">
+                        <span>👤 shawnpana</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install browser-use</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install browser-use')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/shawnpana/browser-use" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Uptime Kuma</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Interact with Uptime Kuma monitoring server. Check service status and manage monitors.</p>
+                    <div class="skill-meta">
+                        <span>👤 msarheed</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install uptime-kuma</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install uptime-kuma')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/msarheed/uptime-kuma" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Remotion Server</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Headless video rendering with Remotion. Works on any Linux server - no Mac or GUI needed.</p>
+                    <div class="skill-meta">
+                        <span>👤 mvanhorn</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install remotion-server</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install remotion-server')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/mvanhorn/remotion-server" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="productivity">
+                    <div class="skill-header">
+                        <h3 class="skill-name">UI Audit</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">AI skill for automated UI audits. Evaluate interfaces against proven UX principles.</p>
+                    <div class="skill-meta">
+                        <span>👤 tommygeoco</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install ui-audit</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install ui-audit')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/tommygeoco/ui-audit" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">PM2</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Manage Node.js apps with PM2 process manager. Start, stop, restart, and monitor processes.</p>
+                    <div class="skill-meta">
+                        <span>👤 asteinberger</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install pm2</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install pm2')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/asteinberger/pm2" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Nomad</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Query HashiCorp Nomad clusters: jobs, nodes, allocations, services. Orchestration control.</p>
+                    <div class="skill-meta">
+                        <span>👤 danfedick</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install nomad</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install nomad')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/danfedick/nomad" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="automation">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Portainer</h3>
+                        <span class="skill-category">Automation</span>
+                    </div>
+                    <p class="skill-description">Control Docker containers and stacks via Portainer API. Container management made simple.</p>
+                    <div class="skill-meta">
+                        <span>👤 asteinberger</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install portainer</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install portainer')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/asteinberger/portainer" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="development">
+                    <div class="skill-header">
+                        <h3 class="skill-name">GitHub PR</h3>
+                        <span class="skill-category">Development</span>
+                    </div>
+                    <p class="skill-description">Fetch, preview, merge, and test GitHub PRs locally. Streamlined PR workflow.</p>
+                    <div class="skill-meta">
+                        <span>👤 dbhurley</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install github-pr</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install github-pr')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/dbhurley/github-pr" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="research">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Context7</h3>
+                        <span class="skill-category">Research</span>
+                    </div>
+                    <p class="skill-description">Access up-to-date documentation for any library or framework. Always current API references.</p>
+                    <div class="skill-meta">
+                        <span>👤 am-will</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install context7</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install context7')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/am-will/context7-api" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Coloring Page</h3>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Turn an uploaded photo into a printable black-and-white coloring page. Fun for kids!</p>
+                    <div class="skill-meta">
+                        <span>👤 borahm</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install coloring-page</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install coloring-page')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/borahm/coloring-page" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+                <article class="skill-card" data-category="data">
+                    <div class="skill-header">
+                        <h3 class="skill-name">ComfyUI</h3>
+                        <span class="skill-category">Data</span>
+                    </div>
+                    <p class="skill-description">Install, manage, and run ComfyUI instances. Stable Diffusion workflow management.</p>
+                    <div class="skill-meta">
+                        <span>👤 johntheyoung</span>
+                    </div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install comfy-cli</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install comfy-cli')">📋</button>
+                    </div>
+                    <div class="skill-links">
+                        <a href="https://github.com/openclaw/skills/tree/main/skills/johntheyoung/comfy-cli" target="_blank">📂 Source</a>
+                    </div>
+                </article>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="https://github.com/VoltAgent/awesome-openclaw-skills" class="btn btn-primary" target="_blank">View All 700+ Skills on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">What is OpenClaw? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p><strong>OpenClaw</strong> is an open-source, locally-running AI assistant that operates directly on your machine. Unlike cloud-based AI services like ChatGPT or Claude's web interface, OpenClaw runs on your hardware, giving you complete control over your data and capabilities.</p>
+                        <p style="margin-top: 12px;">Previously known as Moltbot and originally Clawdbot, it supports multiple AI models (Claude, GPT-4, Gemini, local LLMs), browser automation, device integration, and extensibility through 700+ community skills.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What are OpenClaw Skills? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p><strong>OpenClaw Skills</strong> are modular extensions that teach your AI agent how to use specific tools and services. Each skill is a directory containing a <code>SKILL.md</code> file with YAML frontmatter and instructions.</p>
+                        <p style="margin-top: 12px;">Skills follow the <a href="https://agentskills.io" style="color: var(--primary);">AgentSkills convention</a> developed by Anthropic. They can integrate with APIs (GitHub, Slack, Supabase), automate browsers (Playwright, Puppeteer), manage infrastructure (Kubernetes, Docker), and much more.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I install OpenClaw skills? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p>The easiest way is using the ClawdHub CLI:</p>
+                        <p style="margin-top: 12px;"><code>npx clawdhub@latest install &lt;skill-name&gt;</code></p>
+                        <p style="margin-top: 12px;">Alternatively, manually copy the skill folder to:</p>
+                        <ul style="margin-top: 12px; margin-left: 20px;">
+                            <li><strong>Global:</strong> <code>~/.openclaw/skills/</code></li>
+                            <li><strong>Workspace:</strong> <code>&lt;project&gt;/skills/</code></li>
+                        </ul>
+                        <p style="margin-top: 12px;">Workspace skills take precedence over global skills.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Are OpenClaw skills free? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p>Yes! All skills in the OpenClaw Skills Directory are free and open-source under permissive licenses. You can use, modify, and redistribute them.</p>
+                        <p style="margin-top: 12px;">However, some skills require API keys for external services (like OpenAI, Brave Search, Supabase, etc.) which may have their own pricing tiers. Many services offer generous free tiers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How is OpenClaw different from ChatGPT or Claude? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p>Key differences:</p>
+                        <ul style="margin-top: 12px; margin-left: 20px;">
+                            <li><strong>Local execution:</strong> OpenClaw runs on your machine with full system access</li>
+                            <li><strong>Multi-model:</strong> Use Claude, GPT-4, Gemini, or local LLMs - your choice</li>
+                            <li><strong>Browser control:</strong> Automate Chrome/Chromium with snapshots and actions</li>
+                            <li><strong>Device integration:</strong> Connect to mobile devices for camera, screen, location</li>
+                            <li><strong>Extensible:</strong> 700+ community skills vs limited plugins</li>
+                            <li><strong>Open source:</strong> Full transparency and customization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I create my own skill? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p>Create a new folder with a <code>SKILL.md</code> file containing YAML frontmatter:</p>
+                        <pre style="background: var(--bg-card); padding: 16px; border-radius: 8px; margin-top: 12px; overflow-x: auto;"><code>---
+name: my-skill
+description: What this skill does
+---
+
+Instructions for the AI agent on how to use this skill...</code></pre>
+                        <p style="margin-top: 12px;">Place it in <code>~/.openclaw/skills/my-skill/</code> and it will be loaded on your next session. See the <a href="https://docs.openclaw.ai/tools/skills" style="color: var(--primary);">full documentation</a> for advanced options.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What API keys do I need? <span>▼</span></div>
+                    <div class="faq-answer">
+                        <p>It depends on which skills you use. Common API keys:</p>
+                        <ul style="margin-top: 12px; margin-left: 20px;">
+                            <li><strong>AI Models:</strong> ANTHROPIC_API_KEY, OPENAI_API_KEY, GOOGLE_API_KEY</li>
+                            <li><strong>Search:</strong> BRAVE_API_KEY, TAVILY_API_KEY, EXA_API_KEY</li>
+                            <li><strong>Services:</strong> GITHUB_TOKEN, SLACK_TOKEN, SUPABASE_KEY</li>
+                        </ul>
+                        <p style="margin-top: 12px;">Add keys to <code>~/.openclaw/openclaw.json</code> under <code>skills.entries.&lt;skill-name&gt;.apiKey</code></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1197,7 +2133,12 @@
                 <div class="cta-card">
                     <h3>💎 Become a Sponsor</h3>
                     <p>Support the OpenClaw ecosystem and get featured placement in the directory.</p>
-                    <a href="mailto:sponsors@openclaw.ai" class="btn btn-secondary">Contact Us →</a>
+                    <a href="sponsor.html" class="btn btn-secondary">View Sponsor Tiers →</a>
+                </div>
+                <div class="cta-card">
+                    <h3>📚 Read the Docs</h3>
+                    <p>Learn how to create skills, configure gating, and optimize for your workflow.</p>
+                    <a href="https://docs.openclaw.ai/tools/skills" class="btn btn-secondary" target="_blank">Documentation →</a>
                 </div>
             </div>
         </div>
@@ -1212,6 +2153,7 @@
                 <a href="https://github.com/openclaw" target="_blank">GitHub</a>
                 <a href="https://clawdhub.com" target="_blank">ClawdHub</a>
                 <a href="https://discord.gg/openclaw" target="_blank">Discord</a>
+                <a href="sponsor.html">Sponsors</a>
             </div>
             <p class="footer-copy">© 2026 OpenClaw Skills Directory. Made with 🦞 for the AI agent community.</p>
         </div>
@@ -1221,8 +2163,11 @@
         // Copy to clipboard
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                // Visual feedback could be added here
-                alert('Copied: ' + text);
+                // Visual feedback
+                event.target.textContent = '✓';
+                setTimeout(() => {
+                    event.target.textContent = '📋';
+                }, 1500);
             });
         }
 
@@ -1251,7 +2196,9 @@
             
             // Update active state
             categoryCards.forEach(card => card.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
             
             skillCards.forEach(card => {
                 if (category === 'all' || card.dataset.category === category) {

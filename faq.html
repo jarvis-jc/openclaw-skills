@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | OpenClaw Skills</title>
+  <meta name="description" content="Frequently asked questions about OpenClaw Skills. Learn how to get listed, featured placement, and more.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Schema.org FAQ Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is OpenClaw Skills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpenClaw Skills is a curated directory of [tools/skills] for [audience]. We help developers discover the best [tools/skills] for their needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get my tool listed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Submit your tool through our submission form. Basic listings are free and include your name, description, and link. We review submissions within 48 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a featured listing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Featured listings get premium placement at the top of categories, homepage spotlight, newsletter inclusion, and social media mentions. Featured listings cost $99/month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you curate listings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We manually review every submission for quality, functionality, and relevance. We prioritize tools that are actively maintained and provide real value to developers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I update my listing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Email us at hello@[domain].com with your updates. Featured listings get priority update processing."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❓</text></svg>">
+  
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --primary: #3b82f6;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .subtitle {
+      color: var(--text-muted);
+    }
+    
+    .faq-section {
+      margin-bottom: 3rem;
+    }
+    
+    .faq-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 1.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    
+    .faq-question:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    
+    .faq-question::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+    
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      padding: 0 1.25rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s;
+      color: var(--text-muted);
+    }
+    
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding: 0 1.25rem 1.25rem;
+    }
+    
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .cta-box h3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .cta-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 0.875rem 2rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    
+    .cta-button:hover {
+      background: #2563eb;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+    
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>❓ Frequently Asked Questions</h1>
+      <p class="subtitle">Everything you need to know about OpenClaw Skills</p>
+    </header>
+    
+    <section class="faq-section">
+      <h2>General Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">What is OpenClaw Skills?</div>
+        <div class="faq-answer">
+          <p>OpenClaw Skills is a curated directory of [tools/skills] designed for developers and AI enthusiasts. We manually review and categorize each listing to help you find the best solutions for your needs.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How is this different from other directories?</div>
+        <div class="faq-answer">
+          <p>We focus exclusively on [niche]. Every listing is manually reviewed for quality and relevance. We're not just aggregating links — we're curating the best tools and providing context to help you make informed decisions.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is this directory free to use?</div>
+        <div class="faq-answer">
+          <p>Yes! Browsing and searching the directory is completely free. We make money through featured listings from tool creators who want extra visibility.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section">
+      <h2>Getting Listed</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do I submit my tool?</div>
+        <div class="faq-answer">
+          <p>Visit our <a href="submit.html" style="color: var(--primary);">submission page</a> and fill out the form. Basic listings are free. We'll review your submission within 48 hours and notify you by email.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">What are the listing requirements?</div>
+        <div class="faq-answer">
+          <p>Your tool should be: (1) Functional and accessible, (2) Relevant to our niche, (3) Actively maintained, (4) Have clear documentation. We reject tools that are broken, abandoned, or off-topic.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I update my listing after submission?</div>
+        <div class="faq-answer">
+          <p>Yes! Email us with your listing URL and the changes you'd like to make. Featured listings get priority processing for updates.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section">
+      <h2>Featured Listings</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">What is a featured listing?</div>
+        <div class="faq-answer">
+          <p>Featured listings get premium placement: top of category, homepage spotlight, featured badge, newsletter inclusion, and social media mentions. It's the best way to get maximum visibility for your tool.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How much does it cost?</div>
+        <div class="faq-answer">
+          <p>Featured listings are $99/month with no long-term commitment. Cancel anytime and stay featured until your billing period ends.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is it worth it?</div>
+        <div class="faq-answer">
+          <p>Featured listings get 10x more visibility than basic listings. If you're looking to drive traffic and signups, it's one of the most cost-effective marketing channels for developer tools.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section">
+      <h2>Contact & Support</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do I contact you?</div>
+        <div class="faq-answer">
+          <p>Email us at hello@[domain].com for any questions, feedback, or partnership inquiries. We typically respond within 24 hours.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I advertise on this site?</div>
+        <div class="faq-answer">
+          <p>Yes! We offer featured listings and newsletter sponsorships. Email us for current rates and availability.</p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="cta-box">
+      <h3>Still have questions?</h3>
+      <p>We'd love to hear from you.</p>
+      <a href="mailto:hello@example.com" class="cta-button">Contact Us →</a>
+    </div>
+  </div>
+  
+  <footer>
+    <p><a href="/">← Back to Directory</a> · <a href="submit.html">Submit Listing</a> · <a href="featured.html">Get Featured</a></p>
+  </footer>
+  
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

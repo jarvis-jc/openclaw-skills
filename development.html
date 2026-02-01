@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Skills | OpenClaw Skills Directory</title>
+    <meta name="description" content="65 development skills for OpenClaw agents. GitHub, Vercel, Kubernetes, coding agents, CI/CD, and more. Supercharge your development workflow with AI.">
+    
+    <meta property="og:title" content="Development Skills for OpenClaw Agents">
+    <meta property="og:description" content="65 development skills: GitHub, Vercel, Kubernetes, coding agents, and deployment tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skills.openclaw.ai/development">
+    
+    <link rel="canonical" href="https://skills.openclaw.ai/development.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Development Skills for OpenClaw",
+        "description": "65 development skills for OpenClaw AI agents including GitHub, Vercel, Kubernetes, and coding agents.",
+        "url": "https://skills.openclaw.ai/development.html",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "OpenClaw Development Skills",
+            "numberOfItems": 65
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%); border-bottom: 1px solid var(--border); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), #ec4899); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .logo-text { font-size: 1.5rem; font-weight: 700; }
+        .logo-text span { color: var(--primary); }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; font-size: 14px; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .hero { padding: 60px 0; text-align: center; background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.05) 100%); }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; }
+        .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 24px; }
+        .breadcrumb { display: flex; gap: 8px; justify-content: center; color: var(--text-secondary); font-size: 14px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .skills-section { padding: 60px 0; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 24px; }
+        .skill-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; transition: all 0.2s; }
+        .skill-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+        .skill-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .skill-name { font-size: 1.25rem; font-weight: 700; }
+        .skill-category { font-size: 12px; padding: 4px 10px; border-radius: 20px; background: rgba(99, 102, 241, 0.2); color: var(--primary); }
+        .skill-description { color: var(--text-secondary); margin-bottom: 16px; font-size: 14px; }
+        .skill-meta { display: flex; gap: 16px; margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); }
+        .skill-install { background: var(--bg-dark); border-radius: 8px; padding: 12px 16px; font-family: 'SF Mono', Monaco, monospace; font-size: 13px; color: var(--secondary); display: flex; justify-content: space-between; align-items: center; }
+        .copy-btn { background: transparent; border: none; color: var(--text-secondary); cursor: pointer; padding: 4px 8px; border-radius: 4px; }
+        .copy-btn:hover { background: var(--bg-card); color: var(--text-primary); }
+        footer { border-top: 1px solid var(--border); padding: 48px 0; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 24px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; }
+        .footer-copy { color: var(--text-secondary); font-size: 14px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .skills-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><div class="logo-icon">🦞</div><div class="logo-text">Open<span>Claw</span> Skills</div></a>
+                <nav class="nav-links">
+                    <a href="/">All Skills</a>
+                    <a href="productivity.html">Productivity</a>
+                    <a href="automation.html">Automation</a>
+                    <a href="https://docs.openclaw.ai" target="_blank">Docs</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="/">Home</a> / <span>Development</span></div>
+            <h1>💻 Development Skills</h1>
+            <p>65 skills for developers. GitHub, Vercel, Kubernetes, coding agents, CI/CD pipelines, and deployment automation.</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="container">
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">GitHub</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Interact with GitHub using the gh CLI. Create repos, manage PRs, issues, and automate Git workflows.</p>
+                    <div class="skill-meta"><span>👤 steipete</span><span>⭐ Popular</span></div>
+                    <div class="skill-install"><code>npx clawdhub install github</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install github')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Coding Agent</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent. Delegate complex coding tasks.</p>
+                    <div class="skill-meta"><span>👤 steipete</span><span>⭐ Popular</span></div>
+                    <div class="skill-install"><code>npx clawdhub install coding-agent</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install coding-agent')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Vercel Deploy</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Deploy applications and websites to Vercel. Manage projects, domains, and environment variables.</p>
+                    <div class="skill-meta"><span>👤 thesethrose</span><span>⭐ Popular</span></div>
+                    <div class="skill-install"><code>npx clawdhub install vercel</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install vercel')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Kubernetes</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Comprehensive Kubernetes and OpenShift cluster management. Execute kubectl commands.</p>
+                    <div class="skill-meta"><span>👤 kcns008</span><span>⭐ Popular</span></div>
+                    <div class="skill-install"><code>npx clawdhub install kubernetes</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install kubernetes')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Conventional Commits</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Format commit messages using the Conventional Commits specification.</p>
+                    <div class="skill-meta"><span>👤 bastos</span></div>
+                    <div class="skill-install"><code>npx clawdhub install conventional-commits</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install conventional-commits')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Frontend Design</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Create distinctive, production-grade frontend interfaces with high design quality.</p>
+                    <div class="skill-meta"><span>👤 steipete</span></div>
+                    <div class="skill-install"><code>npx clawdhub install frontend-design</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install frontend-design')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Cursor Agent</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">A comprehensive skill for using the Cursor CLI agent. AI-powered code editing.</p>
+                    <div class="skill-meta"><span>👤 swiftlysingh</span></div>
+                    <div class="skill-install"><code>npx clawdhub install cursor-agent</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install cursor-agent')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Factory AI</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Use Factory AI's droid CLI for software engineering tasks.</p>
+                    <div class="skill-meta"><span>👤 mitchellbernstein</span></div>
+                    <div class="skill-install"><code>npx clawdhub install factory-ai</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install factory-ai')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Azure CLI</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Comprehensive Azure Cloud Platform management via command-line interface.</p>
+                    <div class="skill-meta"><span>👤 ddevaal</span></div>
+                    <div class="skill-install"><code>npx clawdhub install azure-cli</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install azure-cli')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Fly.io CLI</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Fly.io deploy, logs, SSH, secrets, scaling, and Postgres management.</p>
+                    <div class="skill-meta"><span>👤 justinburdett</span></div>
+                    <div class="skill-install"><code>npx clawdhub install flyio-cli</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install flyio-cli')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Dokploy</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Manage Dokploy deployments, projects, applications, and domains.</p>
+                    <div class="skill-meta"><span>👤 joshuarileydev</span></div>
+                    <div class="skill-install"><code>npx clawdhub install dokploy</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install dokploy')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">GitHub PR</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Fetch, preview, merge, and test GitHub PRs locally.</p>
+                    <div class="skill-meta"><span>👤 dbhurley</span></div>
+                    <div class="skill-install"><code>npx clawdhub install github-pr</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install github-pr')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Remotion Server</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Headless video rendering with Remotion. Works on any Linux server.</p>
+                    <div class="skill-meta"><span>👤 mvanhorn</span></div>
+                    <div class="skill-install"><code>npx clawdhub install remotion-server</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install remotion-server')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">Perry Workspaces</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Create and manage isolated Docker workspaces on your tailnet with Claude Code.</p>
+                    <div class="skill-meta"><span>👤 gricha</span></div>
+                    <div class="skill-install"><code>npx clawdhub install perry-workspaces</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install perry-workspaces')">📋</button></div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header"><h3 class="skill-name">AgentLens</h3><span class="skill-category">Development</span></div>
+                    <p class="skill-description">Navigate and understand codebases using agentlens hierarchical documentation.</p>
+                    <div class="skill-meta"><span>👤 nguyenphutrong</span></div>
+                    <div class="skill-install"><code>npx clawdhub install agentlens</code><button class="copy-btn" onclick="copyToClipboard('npx clawdhub install agentlens')">📋</button></div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="/" class="btn btn-primary">← Back to All Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">All Skills</a>
+                <a href="productivity.html">Productivity</a>
+                <a href="research.html">Research</a>
+                <a href="automation.html">Automation</a>
+                <a href="communication.html">Communication</a>
+                <a href="data.html">Data</a>
+            </div>
+            <p class="footer-copy">© 2026 OpenClaw Skills Directory</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                event.target.textContent = '✓';
+                setTimeout(() => { event.target.textContent = '📋'; }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>

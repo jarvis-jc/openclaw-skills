@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Featured | OpenClaw Skills</title>
+  <meta name="description" content="Boost your visibility with a featured listing. Get top placement, homepage spotlight, and newsletter inclusion.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Get Featured | OpenClaw Skills">
+  <meta property="og:description" content="Boost your visibility with premium placement.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+  
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --success: #22c55e;
+      --gold: #f59e0b;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    h1 span {
+      color: var(--gold);
+    }
+    
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    
+    .benefit-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    
+    .benefit-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .benefit-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .benefit-description {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .pricing-section {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+      border: 1px solid var(--primary);
+      border-radius: 16px;
+      padding: 3rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .price-tag {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .price-tag span {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    
+    .price-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+    
+    .cta-button:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+    
+    .comparison-table {
+      background: var(--surface);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 3rem 0;
+    }
+    
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .comparison-table th {
+      background: rgba(255, 255, 255, 0.05);
+      font-weight: 600;
+    }
+    
+    .comparison-table td:nth-child(2),
+    .comparison-table td:nth-child(3),
+    .comparison-table th:nth-child(2),
+    .comparison-table th:nth-child(3) {
+      text-align: center;
+    }
+    
+    .check { color: var(--success); font-size: 1.2rem; }
+    .cross { color: var(--text-muted); }
+    
+    .testimonial {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .testimonial-text {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      color: var(--text-muted);
+    }
+    
+    .faq-section {
+      margin: 3rem 0;
+    }
+    
+    .faq-section h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1.25rem;
+    }
+    
+    .faq-question {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .faq-answer {
+      color: var(--text-muted);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+    }
+    
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⭐ Get <span>Featured</span></h1>
+      <p class="subtitle">Stand out from the crowd. Featured listings get 10x more visibility and appear at the top of search results.</p>
+      
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">10x</div>
+          <div class="stat-label">More visibility</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">5K+</div>
+          <div class="stat-label">Monthly visitors</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3K+</div>
+          <div class="stat-label">Newsletter subscribers</div>
+        </div>
+      </div>
+    </header>
+    
+    <section class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🏆</div>
+        <div class="benefit-title">Top Placement</div>
+        <div class="benefit-description">Your listing appears at the top of its category, above all basic listings.</div>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🏠</div>
+        <div class="benefit-title">Homepage Spotlight</div>
+        <div class="benefit-description">Rotating featured section on the homepage highlights your tool.</div>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">📧</div>
+        <div class="benefit-title">Newsletter Feature</div>
+        <div class="benefit-description">Get included in our weekly newsletter to 3,000+ subscribers.</div>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-title">Social Shoutout</div>
+        <div class="benefit-description">We'll feature your tool on our social media channels.</div>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">⭐</div>
+        <div class="benefit-title">Featured Badge</div>
+        <div class="benefit-description">Eye-catching badge that makes your listing stand out.</div>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">📊</div>
+        <div class="benefit-title">Analytics Access</div>
+        <div class="benefit-description">See how many people view and click on your listing.</div>
+      </div>
+    </section>
+    
+    <section class="pricing-section">
+      <div class="price-tag">$99 <span>/month</span></div>
+      <p class="price-subtitle">Cancel anytime. No long-term commitment.</p>
+      <a href="submit.html?tier=featured" class="cta-button">Get Featured Now →</a>
+    </section>
+    
+    <section class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Basic (Free)</th>
+            <th>Featured ($99/mo)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Listed in directory</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Searchable</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Category placement</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Featured badge</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Top of category</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Homepage spotlight</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Newsletter inclusion</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Social media mention</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Analytics dashboard</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section class="testimonial">
+      <p class="testimonial-text">"Within the first week of being featured, we saw a 300% increase in signups. Best marketing investment we've made."</p>
+      <p class="testimonial-author">— Developer, AI Startup (Featured listing holder)</p>
+    </section>
+    
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">How long does it take to get featured?</div>
+        <div class="faq-answer">Featured listings go live within 24 hours of payment confirmation.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I cancel anytime?</div>
+        <div class="faq-answer">Yes! No long-term contracts. Cancel anytime and you'll remain featured until the end of your billing period.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">What payment methods do you accept?</div>
+        <div class="faq-answer">We accept all major credit cards through Stripe.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I update my listing?</div>
+        <div class="faq-answer">Featured listings can be updated anytime. Just email us with changes.</div>
+      </div>
+    </section>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="submit.html?tier=featured" class="cta-button">Get Featured Now →</a>
+    </div>
+  </div>
+  
+  <footer>
+    <p><a href="/">← Back to Directory</a> · <a href="submit.html">Submit Listing</a></p>
+  </footer>
+</body>
+</html>

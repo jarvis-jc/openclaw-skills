@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Skills | OpenClaw Skills Directory</title>
+    <meta name="description" content="42 productivity skills for OpenClaw agents. Task management, note-taking, presentations, reminders, and workflow optimization. Boost your productivity with AI automation.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Productivity Skills for OpenClaw Agents">
+    <meta property="og:description" content="42 productivity skills: Linear, Apple Reminders, Gamma presentations, Deepwork Tracker, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skills.openclaw.ai/productivity">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://skills.openclaw.ai/productivity.html">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Productivity Skills for OpenClaw",
+        "description": "42 productivity skills for OpenClaw AI agents including task management, presentations, and workflow automation.",
+        "url": "https://skills.openclaw.ai/productivity.html",
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "OpenClaw Productivity Skills",
+            "numberOfItems": 42,
+            "itemListElement": [
+                {"@type": "SoftwareApplication", "name": "Linear", "applicationCategory": "ProductivityApplication"},
+                {"@type": "SoftwareApplication", "name": "Apple Reminders", "applicationCategory": "ProductivityApplication"},
+                {"@type": "SoftwareApplication", "name": "Gamma Presentations", "applicationCategory": "ProductivityApplication"},
+                {"@type": "SoftwareApplication", "name": "Deepwork Tracker", "applicationCategory": "ProductivityApplication"}
+            ]
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), #ec4899);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .logo-text { font-size: 1.5rem; font-weight: 700; }
+        .logo-text span { color: var(--primary); }
+        
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: var(--text-primary); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.05) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        
+        .skills-section { padding: 60px 0; }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.2s;
+        }
+        
+        .skill-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        
+        .skill-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .skill-name { font-size: 1.25rem; font-weight: 700; }
+        .skill-category { font-size: 12px; padding: 4px 10px; border-radius: 20px; background: rgba(99, 102, 241, 0.2); color: var(--primary); }
+        .skill-description { color: var(--text-secondary); margin-bottom: 16px; font-size: 14px; }
+        .skill-meta { display: flex; gap: 16px; margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); }
+        
+        .skill-install {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 13px;
+            color: var(--secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .copy-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        
+        .copy-btn:hover { background: var(--bg-card); color: var(--text-primary); }
+        
+        .skill-links { display: flex; gap: 12px; }
+        .skill-links a { font-size: 13px; color: var(--primary); text-decoration: none; }
+        .skill-links a:hover { text-decoration: underline; }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 0;
+            text-align: center;
+        }
+        
+        .footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 24px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; }
+        .footer-copy { color: var(--text-secondary); font-size: 14px; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🦞</div>
+                    <div class="logo-text">Open<span>Claw</span> Skills</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="/">All Skills</a>
+                    <a href="development.html">Development</a>
+                    <a href="automation.html">Automation</a>
+                    <a href="https://docs.openclaw.ai" target="_blank">Docs</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a> / <span>Productivity</span>
+            </div>
+            <h1>⚡ Productivity Skills</h1>
+            <p>42 skills to boost your productivity. Task management, note-taking, presentations, reminders, and workflow automation.</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="container">
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Linear</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Linear.app CLI for issue tracking. List, create, and update issues directly from your agent.</p>
+                    <div class="skill-meta"><span>👤 whoisnnamdi</span><span>⭐ Popular</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install linearis</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install linearis')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Apple Reminders</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Natural language reminders via Apple Reminders.app. Create and manage reminders with voice-like commands.</p>
+                    <div class="skill-meta"><span>👤 plgonzalezrx8</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install apple-remind-me</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install apple-remind-me')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Deepwork Tracker</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Track deep work sessions locally. Start, stop, and check status of focused work periods.</p>
+                    <div class="skill-meta"><span>👤 adunne09</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install deepwork-tracker</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install deepwork-tracker')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Gamma Presentations</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Generate AI-powered presentations, documents, and social posts using Gamma.app API.</p>
+                    <div class="skill-meta"><span>👤 stopmoclay</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install gamma</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install gamma')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Prompt Log</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Extract conversation transcripts from AI coding session logs (OpenClaw, Claude Code, Codex).</p>
+                    <div class="skill-meta"><span>👤 thesash</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install prompt-log</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install prompt-log')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">UI Audit</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">AI skill for automated UI audits. Evaluate interfaces against proven UX principles.</p>
+                    <div class="skill-meta"><span>👤 tommygeoco</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install ui-audit</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install ui-audit')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">UX Audit</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">AI skill for automated design audits. Evaluate interfaces against proven UX principles.</p>
+                    <div class="skill-meta"><span>👤 tommygeoco</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install ux-audit</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install ux-audit')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">UX Decisions</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">AI skill for the Making UX Decisions framework. Systematic approach to design choices.</p>
+                    <div class="skill-meta"><span>👤 tommygeoco</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install ux-decisions</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install ux-decisions')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Model Usage</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Use CodexBar CLI local cost usage to summarize per-model usage for Codex.</p>
+                    <div class="skill-meta"><span>👤 steipete</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install model-usage</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install model-usage')">📋</button>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3 class="skill-name">Codex Quota</h3>
+                        <span class="skill-category">Productivity</span>
+                    </div>
+                    <p class="skill-description">Check OpenAI Codex CLI rate limit status (daily/weekly quotas) using local session logs.</p>
+                    <div class="skill-meta"><span>👤 odrobnik</span></div>
+                    <div class="skill-install">
+                        <code>npx clawdhub install codex-quota</code>
+                        <button class="copy-btn" onclick="copyToClipboard('npx clawdhub install codex-quota')">📋</button>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="/" class="btn btn-primary">← Back to All Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">All Skills</a>
+                <a href="development.html">Development</a>
+                <a href="research.html">Research</a>
+                <a href="automation.html">Automation</a>
+                <a href="communication.html">Communication</a>
+                <a href="data.html">Data</a>
+            </div>
+            <p class="footer-copy">© 2026 OpenClaw Skills Directory</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                event.target.textContent = '✓';
+                setTimeout(() => { event.target.textContent = '📋'; }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>

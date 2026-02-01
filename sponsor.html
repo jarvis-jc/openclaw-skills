@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor OpenClaw Skills Directory | Support AI Development</title>
+    <meta name="description" content="Support the OpenClaw Skills Directory. Sponsor tiers starting at $49/month. Get featured placement, priority support, and help grow the AI agent ecosystem.">
+    
+    <meta property="og:title" content="Sponsor OpenClaw Skills Directory">
+    <meta property="og:description" content="Support the OpenClaw ecosystem. Bronze $49/mo, Silver $99/mo, Gold $199/mo. Get featured placement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://skills.openclaw.ai/sponsor">
+    
+    <link rel="canonical" href="https://skills.openclaw.ai/sponsor.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Sponsor OpenClaw Skills Directory",
+        "description": "Support the OpenClaw Skills Directory with sponsorship tiers starting at $49/month.",
+        "url": "https://skills.openclaw.ai/sponsor.html"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+            --bronze: #cd7f32;
+            --silver: #c0c0c0;
+            --gold: #ffd700;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary); }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), #ec4899); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .logo-text { font-size: 1.5rem; font-weight: 700; }
+        .logo-text span { color: var(--primary); }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: var(--text-primary); }
+        
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.1) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+        }
+        
+        .pricing-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+        
+        .pricing-card.bronze { border-color: var(--bronze); }
+        .pricing-card.silver { border-color: var(--silver); }
+        .pricing-card.gold { border-color: var(--gold); }
+        
+        .pricing-card.gold {
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.gold:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold), #f97316);
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        
+        .tier-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+        
+        .tier-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .tier-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .tier-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        
+        .tier-features {
+            list-style: none;
+            text-align: left;
+            margin: 32px 0;
+        }
+        
+        .tier-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .check { color: var(--secondary); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 16px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-bronze { background: var(--bronze); color: white; }
+        .btn-silver { background: var(--silver); color: #000; }
+        .btn-gold { background: linear-gradient(135deg, var(--gold), #f97316); color: #000; }
+        
+        .btn:hover { transform: translateY(-2px); }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            background: var(--bg-card);
+        }
+        
+        .benefits-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 48px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .benefit-card {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        
+        .benefit-card p {
+            color: var(--text-secondary);
+        }
+        
+        /* Current Sponsors */
+        .sponsors-section {
+            padding: 80px 0;
+        }
+        
+        .sponsors-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 48px;
+        }
+        
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sponsor-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+        
+        .sponsor-card.placeholder {
+            border-style: dashed;
+            opacity: 0.6;
+        }
+        
+        .sponsor-logo {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        
+        .sponsor-name {
+            font-weight: 600;
+        }
+        
+        .sponsor-tier {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        /* Contact Form */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .contact-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            width: 100%;
+            margin-top: 16px;
+        }
+        
+        .submit-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* FAQ */
+        .faq-section {
+            padding: 80px 0;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 48px;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            padding: 24px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        
+        .faq-answer {
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .pricing-card.gold { transform: none; }
+            .pricing-card.gold:hover { transform: translateY(-8px); }
+            .form-row { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🦞</div>
+                    <div class="logo-text">Open<span>Claw</span> Skills</div>
+                </a>
+                <nav class="nav-links">
+                    <a href="/">Browse Skills</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>💎 Become a Sponsor</h1>
+            <p>Support the OpenClaw Skills Directory and the AI agent ecosystem. Get featured placement, priority support, and help grow the community.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2>Sponsorship Tiers</h2>
+            <p class="pricing-subtitle">Choose the level that's right for you or your company</p>
+            
+            <div class="pricing-grid">
+                <!-- Bronze -->
+                <div class="pricing-card bronze">
+                    <div class="tier-icon">🥉</div>
+                    <div class="tier-name">Bronze</div>
+                    <div class="tier-price">$49<span>/month</span></div>
+                    
+                    <ul class="tier-features">
+                        <li><span class="check">✓</span> Logo in footer sponsors section</li>
+                        <li><span class="check">✓</span> Link to your website</li>
+                        <li><span class="check">✓</span> Monthly newsletter mention</li>
+                        <li><span class="check">✓</span> Support via email</li>
+                        <li><span class="check">✓</span> Sponsor badge for profile</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-bronze">Get Started</a>
+                </div>
+                
+                <!-- Silver -->
+                <div class="pricing-card silver">
+                    <div class="tier-icon">🥈</div>
+                    <div class="tier-name">Silver</div>
+                    <div class="tier-price">$99<span>/month</span></div>
+                    
+                    <ul class="tier-features">
+                        <li><span class="check">✓</span> Everything in Bronze</li>
+                        <li><span class="check">✓</span> Logo on homepage sidebar</li>
+                        <li><span class="check">✓</span> Featured in category pages</li>
+                        <li><span class="check">✓</span> Priority email support</li>
+                        <li><span class="check">✓</span> Quarterly skill promotion</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-silver">Get Started</a>
+                </div>
+                
+                <!-- Gold -->
+                <div class="pricing-card gold">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="tier-icon">🥇</div>
+                    <div class="tier-name">Gold</div>
+                    <div class="tier-price">$199<span>/month</span></div>
+                    
+                    <ul class="tier-features">
+                        <li><span class="check">✓</span> Everything in Silver</li>
+                        <li><span class="check">✓</span> Hero section placement</li>
+                        <li><span class="check">✓</span> Featured skill of the month</li>
+                        <li><span class="check">✓</span> Social media promotion</li>
+                        <li><span class="check">✓</span> Direct Discord support</li>
+                        <li><span class="check">✓</span> Custom integration help</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-gold">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Sponsor?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Targeted Exposure</h3>
+                    <p>Reach thousands of AI developers, DevOps engineers, and tech enthusiasts who actively use OpenClaw agents.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Grow Your Reach</h3>
+                    <p>Get your skills, tools, or services in front of early adopters and decision-makers in the AI space.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💝</div>
+                    <h3>Support Open Source</h3>
+                    <p>Help maintain and improve the directory, fund community events, and support skill authors.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Community Recognition</h3>
+                    <p>Be recognized as a supporter of the AI agent ecosystem. Build goodwill with developers and users.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>SEO Benefits</h3>
+                    <p>Quality backlinks from a growing directory. Improve your search rankings in the AI/developer space.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Early Access</h3>
+                    <p>Get early access to new features, integrations, and directory improvements before public release.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Sponsors -->
+    <section class="sponsors-section">
+        <div class="container">
+            <h2>Current Sponsors</h2>
+            
+            <div class="sponsors-grid">
+                <div class="sponsor-card placeholder">
+                    <div class="sponsor-logo">🥇</div>
+                    <div class="sponsor-name">Your Company Here</div>
+                    <div class="sponsor-tier">Gold Sponsor</div>
+                </div>
+                
+                <div class="sponsor-card placeholder">
+                    <div class="sponsor-logo">🥈</div>
+                    <div class="sponsor-name">Your Company Here</div>
+                    <div class="sponsor-tier">Silver Sponsor</div>
+                </div>
+                
+                <div class="sponsor-card placeholder">
+                    <div class="sponsor-logo">🥉</div>
+                    <div class="sponsor-name">Your Company Here</div>
+                    <div class="sponsor-tier">Bronze Sponsor</div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 32px; color: var(--text-secondary);">
+                Be the first to sponsor! <a href="#contact" style="color: var(--primary);">Get started today →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="contact-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/sponsors" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Company name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="you@company.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tier">Interested Tier</label>
+                    <select id="tier" name="tier">
+                        <option value="">Select a tier...</option>
+                        <option value="bronze">Bronze ($49/month)</option>
+                        <option value="silver">Silver ($99/month)</option>
+                        <option value="gold">Gold ($199/month)</option>
+                        <option value="custom">Custom / Enterprise</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your company and why you'd like to sponsor..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Sponsorship FAQ</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">How long does sponsorship last?</div>
+                    <div class="faq-answer">Sponsorships are billed monthly. You can cancel anytime with no long-term commitment. Annual plans with 2 months free are available.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I upgrade my tier later?</div>
+                    <div class="faq-answer">Absolutely! You can upgrade at any time. The price difference will be prorated for the remainder of your billing cycle.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What payment methods do you accept?</div>
+                    <div class="faq-answer">We accept all major credit cards, PayPal, and bank transfers for annual plans. Invoicing available for enterprise sponsors.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer custom sponsorship packages?</div>
+                    <div class="faq-answer">Yes! For enterprise needs, conference sponsorships, or unique requirements, contact us and we'll create a custom package.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How quickly will my logo appear?</div>
+                    <div class="faq-answer">Logos are typically added within 24-48 hours of payment confirmation. We'll send you a confirmation email when live.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Browse Skills</a>
+                <a href="https://openclaw.ai">OpenClaw</a>
+                <a href="https://docs.openclaw.ai">Documentation</a>
+                <a href="https://github.com/openclaw">GitHub</a>
+                <a href="https://discord.gg/openclaw">Discord</a>
+            </div>
+            <p class="footer-copy">© 2026 OpenClaw Skills Directory. Made with 🦞 for the AI agent community.</p>
+        </div>
+    </footer>
+</body>
+</html>
